@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>填表</title>
+    <style type="text/css">
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-color: #ccc;
+        }
+        #container {
+            position: relative;
+            width: 400px;
+            height: 350px;
+            margin: 30px auto;
+            background-color: #333;
+            color: #ccc;
+            cursor: pointer;
+        }
+        table {
+            width: 400px;
+            border-spacing: 0;
+            margin-bottom: 50px;
+        }
+        table tr:first-child,
+        table tr:last-child {
+            text-align: center;
+        }
+        table input:not([type="submit"]) {
+            width: 100%;
+            outline: none;
+            background-color: transparent;
+            color: #ccc;
+            border: 0;
+        }
+        input[type="submit"] {
+            outline: none;
+            background-color: #ccc;
+        }
+        table td {
+            color: #ccc;
+        }
+        .ask {
+            margin-top: 100px;
+            background-color: #333;
+            line-height: 50px;
+            text-align: center;
+            color: #ccc;
+        }
+        a {
+            margin-top: 10px;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            background-color: #333;
+            color: #ccc;
+        }
+    </style>
+
+</head>
+<body>
+<div id="container">
+    <form id="form1" action="Servlet" methods="post">
+        <table class="insert" border="1">
+            <tr>
+                <td colspan="2">数据库表person信息</td>
+            </tr>
+            <tr>
+                <td>username</td>
+                <td><input type="text" name="username" required="required" autofocus></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input type="text" name="name" required="required"></td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td><input type="text" name="age" required="required"></td>
+            </tr>
+            <tr>
+                <td>teleno</td>
+                <td><input type="tel" name="tel" required="required" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$"></td>
+
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="sub" id="sub1" required="required"></td>
+            </tr>
+        </table>
+    </form>
+    <form action="Servlet" methods="post" id="form2">
+        <table class="delete" border="1">
+            <tr>
+                <td colspan="2">数据库表user删除信息</td>
+            </tr>
+            <tr>
+                <td>username</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="sub" id="sub2"></td>
+            </tr>
+        </table>
+    </form>
+    <div class="ask">ajax请求后台数据</div>
+    <a href="data.html" target="_self">查看数据库</a>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

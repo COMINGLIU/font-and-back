@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* init */
+html,body {
+    width: 100%;
+    height: 100%;
+}
+body,ul {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+body {
+    background-color: #ccc;
+}
+#container {
+    position: relative;
+    width: 805px;
+    margin: auto;
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* table */
+table {
+    border-spacing: 0;
+    text-align: center;
+    background-color: #333;
+}
+table tr:first-child td {
+    font-size: 40px;
+    line-height: 80px;
+}
+table td {
+    width: 200px;
+    height: 30px;
+}
+table td:last-child {
+    width: 200px;
+}
+/* btn */
+ul.btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0;
+}
+ul.btns li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #444;
+    color: #ccc;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+}
+ul.btns li.pre,
+ul.btns li.next,
+ul.btns li.sign,
+ul.btns li.jump-value,
+ul.btns li.jump{
+    width: 80px;
+}
+#back {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #333;
+    color: #ff0;
+}

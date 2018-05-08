@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="sqlBig2Web:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/sqlBig2Web_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="sqlBig2Web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="sqlBig2Web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/sqlBig2Web/src/lib/mysql-connector-java-5.1.46-bin.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
